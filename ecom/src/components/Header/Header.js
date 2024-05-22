@@ -5,6 +5,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import Select from "../selectDrop/Select";
 import axios from "axios";
 import iconCompare from "../../assets/images/icon-compare.svg";
+import iconHeart from '../../assets/images/icon-heart.svg';
+import iconUser from '../../assets/images/icon-user.svg';
+import iconCart from  '../../assets/images/icon-cart.svg';
+
+
 
 function Header() {
   const [Categories, setCategories] = useState([
@@ -68,6 +73,26 @@ function Header() {
                       <img src={iconCompare} />
                       <span className="badge bg-success rounded-circle">3</span>
                       Compare
+                    </span>
+                  </li>
+                  <li className="list-inline-item">
+                    <span>
+                      <img src={iconHeart} />
+                      <span className="badge bg-success rounded-circle">3</span>
+                      Whislist
+                    </span>
+                  </li>
+                  <li className="list-inline-item">
+                    <span>
+                      <img src={iconCart} />
+                      <span className="badge bg-success rounded-circle">3</span>
+                      Cart
+                    </span>
+                  </li>
+                  <li className="list-inline-item">
+                    <span>
+                      <img src={iconUser} />
+                      Accounts
                     </span>
                   </li>
                 </ul>
