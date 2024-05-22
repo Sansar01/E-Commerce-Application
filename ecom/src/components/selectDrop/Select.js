@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../selectDrop/Select.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { ClickAwayListener } from "@mui/base/ClickAwayListener";
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
 function Select(props) {
   const [isOpenSelect, setisOpenSelect] = useState(false);
@@ -41,6 +42,7 @@ function Select(props) {
   return (
     <ClickAwayListener onClickAway={()=>setisOpenSelect(false)}>
       <div className="selectDropWrapper cursor position-relative">
+     {props.placeholder==="Your Location" && <LocationOnOutlinedIcon style={{opacity:'0.5 '}}/>}
         <span className="openSelect" onClick={openSelect}>
           {selectedItem}
           <KeyboardArrowDownIcon className="arrow" />

@@ -23,7 +23,8 @@
  margin-top: 5px;
  padding: 5px 0px;
  max-height: 300px;
- overflow-y: scroll;
+ overflow-y: auto;
+ scrollbar-width: thin;
 }
 
 .selectDrop .searchResults::-webkit-scrollbar{
