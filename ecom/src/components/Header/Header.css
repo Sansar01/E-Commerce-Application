@@ -15,7 +15,7 @@ header .headerSearch {
 }
 
 header .headerSearch .selectDropWrapper {
-    width: 25%;
+    width: 30%;
     font-size: 14px;
     font-weight: 500;
     position: relative;
@@ -33,7 +33,7 @@ header .headerSearch .selectDropWrapper::after {
 
 header .headerSearch .search {
     width: 75%;
-    padding-left: 30px;
+    padding-left: 15px;
     position: relative;
 }
 
@@ -53,7 +53,7 @@ header .headerSearch .search .searchIcon {
 }
 
 header .countryWrapper .selectDropWrapper {
-    width: 165px !important;
+    width: 180px !important;
     height: 40px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding-left: 10px;
@@ -63,7 +63,6 @@ header .countryWrapper .selectDropWrapper {
     -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
     border-radius: 2px;
-    margin-left: -5px;
 }
 
 header .countryWrapper .selectDropWrapper .openSelect {
@@ -79,15 +78,16 @@ header .countryWrapper .openSelect {
 }
 
 header .headerTabs {
-    padding-left: 20px;
+    padding-left: 17px;
 }
 
 header .headerTabs li {
     position: relative;
+    margin-left: 2px;
 }
 
 header .headerTabs li span {
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
 }
 
@@ -103,4 +103,34 @@ header .headerTabs li span.badge {
     top: -13px;
     color: #fff;
     font-weight: 400;
+}
+.dropdownMenu{
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    width: 200px;
+    height: auto;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+    padding: 10px 0px;
+    padding-right: 3px;
+}
+.dropdownMenu li{
+    width: 100%;
+    list-style: none;
+}
+.dropdownMenu li button{
+    width: 100% !important;
+    text-align: left;
+    justify-content: flex-start !important;
+    color: #000 !important;
+    text-transform: capitalize !important;
+    font-size: 15px !important;
+    padding: 10px 15px !important;
+
+
+}
+.dropdownMenu li button svg{
+    opacity: 0.7;
+    margin-right: 8px !important;
 }

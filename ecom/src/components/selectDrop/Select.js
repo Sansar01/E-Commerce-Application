@@ -9,6 +9,8 @@ function Select(props) {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [selectedItem, setselectedItem] = useState(props.placeholder)
 
+  const [listData,setlistData] = useState(props.data);
+
   const openSelect = () => {
     setisOpenSelect(!isOpenSelect)
   }
@@ -26,17 +28,25 @@ function Select(props) {
 
     // set Selected Item
     setselectedItem(item.textContent)
-    if (props.placeholder === 'All Categories') {
-      //changing the value of css class
-      if (item.textContent.length >= 17) {
-        let css = document.styleSheets[3].cssRules[2].style
-        css.setProperty('width', '30%')
-      } else {
-        let css = document.styleSheets[3].cssRules[2].style
-        css.setProperty('width', '27%')
-      }
-    }
+
+    // if (props.placeholder === 'All Categories') {
+    //   //changing the value of css class
+    //   if (item.textContent.length >= 17) {
+    //     let css = document.styleSheets[3].cssRules[2].style
+    //     css.setProperty('width', '30%')
+    //   } else {
+    //     let css = document.styleSheets[3].cssRules[2].style
+    //     css.setProperty('width', '27%')
+    //   }
+    // }
   }
+
+   const filterList =(e)=>{
+
+        const filterItem = props.data.filter((item,index)=>item.toLowerCase().includes(e.target.value.toLowerCase()) && props.data.indexOf(item)===index);
+        setlistData(filterItem)
+   }
+
 
   return (
     <ClickAwayListener onClickAway={() => setisOpenSelect(false)}>
@@ -45,13 +55,13 @@ function Select(props) {
           <LocationOnOutlinedIcon style={{ opacity: '0.5 ' }} />
         )}
         <span className="openSelect" onClick={openSelect}>
-          {selectedItem}
+          {selectedItem.length>15?selectedItem.substr(0,15)+'...':selectedItem}
           <KeyboardArrowDownIcon className="arrow" />
         </span>
         {isOpenSelect && (
           <div className="selectDrop">
             <div className="searchField">
-              <input type="text" placeholder="Search here" />
+              <input type="text" placeholder="Search here" onChange={filterList} />
             </div>
             <ul className="searchResults">
               <li
@@ -62,7 +72,7 @@ function Select(props) {
                 {props.placeholder}
               </li>
               {props &&
-                props.data.map((category, Index) => {
+                listData.map((category, Index) => {
                   return (
                     <li
                       key={Index + 1}

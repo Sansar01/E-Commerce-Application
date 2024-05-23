@@ -5,13 +5,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import Select from "../selectDrop/Select";
 import axios from "axios";
 import iconCompare from "../../assets/images/icon-compare.svg";
-import iconHeart from '../../assets/images/icon-heart.svg';
-import iconUser from '../../assets/images/icon-user.svg';
-import iconCart from  '../../assets/images/icon-cart.svg';
-
-
+import iconHeart from "../../assets/images/icon-heart.svg";
+import iconUser from "../../assets/images/icon-user.svg";
+import iconCart from "../../assets/images/icon-cart.svg";
+import Button from "@mui/material/Button";
+import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 
 function Header() {
+  const [isOpenDropdown, setisOpenDropdown] = useState(false);
+
   const [Categories, setCategories] = useState([
     "Milks and Dairies",
     "Wines & Drinks",
@@ -42,6 +48,14 @@ function Header() {
       console.log(error.message);
     }
   };
+
+  const handleMouseover = ()=>{
+   if(!isOpenDropdown)
+   {
+    setisOpenDropdown(isOpenDropdown);
+   }
+
+  }
 
   return (
     <>
@@ -89,11 +103,47 @@ function Header() {
                       Cart
                     </span>
                   </li>
-                  <li className="list-inline-item">
+                  <li
+                    className="list-inline-item" onMouseEnter={()=>setisOpenDropdown(true)} onMouseLeave={()=>setisOpenDropdown(false)}
+                  >
                     <span>
                       <img src={iconUser} />
                       Accounts
                     </span>
+                    {isOpenDropdown && (  
+                      <ul className="dropdownMenu">
+                        <li>
+                          <Button>
+                            <Person2OutlinedIcon />
+                            My Account
+                          </Button>
+                        </li>
+                        <li>
+                          <Button>
+                            <LocationOnOutlinedIcon />
+                            Order Tracking
+                          </Button>
+                        </li>
+                        <li>
+                          <Button>
+                            <FavoriteBorderOutlinedIcon />
+                            My Whishlist
+                          </Button>
+                        </li>
+                        <li>
+                          <Button>
+                            <SettingsOutlinedIcon />
+                            Setting
+                          </Button>
+                        </li>
+                        <li>
+                          <Button>
+                            <LogoutOutlinedIcon />
+                            Sign-out
+                          </Button>
+                        </li>
+                      </ul>
+                    )}
                   </li>
                 </ul>
               </div>
