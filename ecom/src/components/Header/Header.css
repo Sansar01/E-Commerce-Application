@@ -104,33 +104,39 @@ header .headerTabs li span.badge {
     color: #fff;
     font-weight: 400;
 }
-.dropdownMenu{
+
+.dropdownMenu {
     position: absolute;
     top: 32px;
     right: 0px;
     width: 200px;
     height: auto;
     background: #fff;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
     padding: 10px 0px;
     padding-right: 3px;
 }
-.dropdownMenu li{
+
+.dropdownMenu li {
     width: 100%;
     list-style: none;
 }
-.dropdownMenu li button{
+
+.dropdownMenu li button {
     width: 100% !important;
     text-align: left;
     justify-content: flex-start !important;
-    color: #000 !important;
+    color: rgba(0, 0, 0, 0.7) !important;
     text-transform: capitalize !important;
     font-size: 15px !important;
     padding: 10px 15px !important;
-
-
 }
-.dropdownMenu li button svg{
+
+.dropdownMenu li button svg {
     opacity: 0.7;
     margin-right: 8px !important;
+}
+
+.dropdownMenu li button:hover {
+    background: #f1f1f1;
 }

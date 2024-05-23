@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/images/logo.svg";
 import "../Header/Header.css";
@@ -48,14 +49,6 @@ function Header() {
       console.log(error.message);
     }
   };
-
-  const handleMouseover = ()=>{
-   if(!isOpenDropdown)
-   {
-    setisOpenDropdown(isOpenDropdown);
-   }
-
-  }
 
   return (
     <>
