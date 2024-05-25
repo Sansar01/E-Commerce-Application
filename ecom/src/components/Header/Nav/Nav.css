@@ -1,0 +1,108 @@
+.nav {
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav .catTab {
+    padding: 8px 20px !important;
+    font-size: 15px !important;
+    text-transform: capitalize !important;
+    margin-left: 15px;
+}
+
+.nav ul li button {
+    text-transform: capitalize !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+    padding: 10px 7px !important;
+
+
+}
+
+.nav ul li button a {
+    text-decoration: none !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+    font-size: 15px !important;
+}
+
+.nav .part3 .phNo svg {
+    font-size: 45px !important;
+    opacity: 0.8;
+}
+
+.nav .part3 .phNo h3 {
+    font-size: 28px !important;
+    line-height: 30px !important;
+}
+
+.nav .part3 .phNo p {
+    font-size: 15px !important;
+    opacity: 0.8;
+}
+
+.nav  .dropdown_menu {
+    position: absolute;
+    top: 32%;
+    /* margin: 2px; */
+    /* left: 0px; */
+    width: 200px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 5px 35px;
+    z-index: 100;
+    transition: all 0.1s ease-in-out;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+}
+ 
+  .nav .dropdown_menu ul{
+    position: relative;
+    margin-left: -55px;
+  }
+
+ .nav .dropdown_menu li {
+    width: 100% !important;
+    list-style: none;
+    margin: 0px !important;
+    
+}
+
+.nav .dropdown_menu li button {
+    width: 100% !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+    padding: 5px 5px !important;
+    color: #3bb77e !important;
+}
+
+.nav .dropdown_menu li button a{
+    font-weight: 400 !important;
+}
+
+ .nav .dropdown_menu li button:hover {
+    background: #f1f1f1 !important;
+}
+.nav li:hover .dropdown_menu{
+    top: 110%;
+    opacity: 1;
+    visibility: inherit;
+}
+.mega_menu_width
+{
+    width: 95% !important;
+}
+.mega_menu
+{
+    padding: 40px 45px !important;
+    margin-left: -650px;
+    /* margin-top: 45px; */
+}
+.megaMenu .col ul li{margin-bottom: 10px !important; display: block;}
+.megaMenu .col ul li a{color: rgba(0,0,0,0.7); font-size: 20px; text-decoration: none;}

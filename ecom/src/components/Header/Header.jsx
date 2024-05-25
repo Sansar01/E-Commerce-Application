@@ -15,6 +15,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import Nav from "./Nav/Nav";
 
 function Header() {
   const [isOpenDropdown, setisOpenDropdown] = useState(false);
@@ -97,7 +98,7 @@ function Header() {
                     </span>
                   </li>
                   <li
-                    className="list-inline-item" onMouseEnter={()=>setisOpenDropdown(true)} onMouseLeave={()=>setisOpenDropdown(false)}
+                    className="list-inline-item position-relative" onMouseEnter={()=>setisOpenDropdown(true)} onMouseLeave={()=>setisOpenDropdown(false)}
                   >
                     <span>
                       <img src={iconUser} />
@@ -144,6 +145,8 @@ function Header() {
           </div>
         </div>
       </header>
+
+      <Nav/>
     </>
   );
 }

@@ -87,12 +87,12 @@ header .headerTabs li {
 }
 
 header .headerTabs li span {
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
 }
 
 header .headerTabs li span img {
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 header .headerTabs li span.badge {
@@ -107,7 +107,7 @@ header .headerTabs li span.badge {
 
 .dropdownMenu {
     position: absolute;
-    top: 32px;
+    top: 30px;
     right: 0px;
     width: 200px;
     height: auto;
@@ -115,6 +115,7 @@ header .headerTabs li span.badge {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
     padding: 10px 0px;
     padding-right: 3px;
+    z-index: 1000;
 }
 
 .dropdownMenu li {
