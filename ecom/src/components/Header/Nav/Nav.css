@@ -7,10 +7,9 @@
 }
 
 .nav .catTab {
-    padding: 8px 20px !important;
-    font-size: 15px !important;
+    padding: 10px 10px !important;
+    font-size: 12px !important;
     text-transform: capitalize !important;
-    margin-left: 15px;
 }
 
 .nav ul li button {
@@ -101,7 +100,7 @@
 .mega_menu
 {
     padding: 40px 45px !important;
-    margin-left: -650px;
+    margin-left: -535px;
     /* margin-top: 45px; */
 }
 .megaMenu .col ul li{margin-bottom: 10px !important; display: block;}

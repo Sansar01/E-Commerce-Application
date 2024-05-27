@@ -12,10 +12,10 @@ function Nav() {
     <div className="nav d-flex align-items-center">
       <div className="container-fluid">
         <div className="row position-relative">
-          <div className="col-sm-3 part1 d-flex align-items-center">
+          <div className="col-sm-2 part1 d-flex align-items-center">
             <Button className='bg-g text-white catTab'><GridViewIcon /> &nbsp; Browse All Categories<KeyboardArrowDownIcon /></Button>
           </div>
-          <div className="col-sm-7 part2 position-static">
+          <div className="col-sm-8 part2 position-static">
             <ul className="list list inline mb-0">
               <li className="list-inline-item">
                 <Button><Link>Home</Link></Button>
