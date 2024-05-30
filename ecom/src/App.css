@@ -9,6 +9,10 @@
 body{
   font-family: "Roboto", sans-serif;
 }
+
+.transition{
+  transition:all 0.3s ease-in-out ;
+}
 .cursor{
   cursor: pointer;
 }
@@ -20,4 +24,9 @@ body{
 }
 .text-g{
   color: #3bb77e;
+}
+.hd{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
