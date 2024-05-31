@@ -71,7 +71,7 @@ function Header() {
             </div>
             {/* {header search end here} */}
             <div className="col-sm-5 d-flex align-items-center">
-              <div className="ml-auto d-flex align-items-center">
+              <div className="ms-auto d-flex align-items-center">
                 <div className="countryWrapper">
                   <Select data={countryList} placeholder={"Your Location"} />
                 </div>
