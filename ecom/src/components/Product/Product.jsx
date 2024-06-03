@@ -4,13 +4,30 @@ import Rating from '@mui/material/Rating';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined';
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 
-function Product() {
+function Product(props) {
     return (
         <div className="productThumb">
+        <span className={`badge ${props.tag}`}>New</span>
             <Link>
                 <div className="imgWrapper">
                     <img src="https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-2.jpg" alt="" className='w-100' />
+                    <div className="overlay transition">
+                             <ul className="list list-inline mb-0">
+                                 <li className="list-inline-item">
+                                    <a className='cursor' tooltip="Add to Wishlist"><FavoriteBorderOutlinedIcon/></a>
+                                 </li>
+                                 <li className="list-inline-item">
+                                    <a className='cursor' tooltip="Compare"><CompareArrowsOutlinedIcon/></a>
+                                 </li>
+                                 <li className="list-inline-item">
+                                    <a className='cursor' tooltip="Quick View"><RemoveRedEyeOutlinedIcon/></a>
+                                 </li>
+                             </ul>
+                    </div>
                 </div>
             </Link>
             <div className="info">

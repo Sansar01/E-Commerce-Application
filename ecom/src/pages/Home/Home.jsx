@@ -18,7 +18,7 @@ function Home() {
             <h2 className="hd mb-0 mt-0">
               Popular Products
             </h2>
-            <ul className="list list-inline ms-auto filtertab">
+            <ul className="list list-inline ms-auto filtertab mb-0">
               <li className="list-inline-item">
                 <a href="" className="cursor">All</a>
               </li>
@@ -44,19 +44,19 @@ function Home() {
           </div>
           <div className="productRow">
             <div className="item">
-              <Product/>
+              <Product tag="hot"/>
             </div>
             <div className="item">
-              <Product/>
+              <Product tag="sale"/>
             </div>
             <div className="item">
-              <Product/>
+              <Product tag="news"/>
             </div>
             <div className="item">
-              <Product/>
+              <Product tag="best"/>
             </div>
             <div className="item">
-              <Product/>
+              <Product tag="hot"/>
             </div>
           </div>
         </div>
