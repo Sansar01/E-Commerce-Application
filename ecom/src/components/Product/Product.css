@@ -20,7 +20,8 @@
     padding: 10px 15px;
     font-size: 10px;
     border-bottom-right-radius: 50px;
-    border-top-left-radius: 30px
+    border-top-left-radius: 30px;
+    text-transform: capitalize;
 }
 
 .productThumb .badge.hot {
@@ -80,7 +81,6 @@
 .productThumb:hover .imgWrapper .overlay {
     opacity: 1;
     transform: scale(1);
-    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .productThumb .imgWrapper .overlay ul li {
@@ -133,17 +133,7 @@
     text-decoration: none;
 }
 
-.productThumb .price {
-    font-size: 15px;
-    margin-right: 20px;
-}
 
-.productThumb .oldprice {
-    font-size: 18px;
-    opacity: 0.6;
-    color: #000;
-    text-decoration: line-through;
-}
 
 .productThumb button {
     font-size: 12px !important;

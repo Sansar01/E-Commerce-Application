@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../assets/images/logo.svg";
 import "../Header/Header.css";
 import SearchIcon from "@mui/icons-material/Search";
@@ -19,6 +19,8 @@ import Nav from "./Nav/Nav";
 
 function Header() {
   const [isOpenDropdown, setisOpenDropdown] = useState(false);
+
+  const headerRef = useRef();
 
   const [Categories, setCategories] = useState([
     "Milks and Dairies",
@@ -51,8 +53,19 @@ function Header() {
     }
   };
 
+  useEffect(()=>{
+    window.addEventListener("scroll",()=>{
+      let position = window.pageYOffset;
+      if(position>50)
+        headerRef.current.classList.add('fixed');
+      else
+      headerRef.current.classList.remove('fixed');
+    })
+  },[])
+
   return (
     <>
+      <div className="headerWrapper" ref={headerRef}>
       <header>
         <div className="container-fluid">
           <div className="row">
@@ -98,13 +111,15 @@ function Header() {
                     </span>
                   </li>
                   <li
-                    className="list-inline-item position-relative" onMouseEnter={()=>setisOpenDropdown(true)} onMouseLeave={()=>setisOpenDropdown(false)}
+                    className="list-inline-item position-relative"
+                    onMouseEnter={() => setisOpenDropdown(true)}
+                    onMouseLeave={() => setisOpenDropdown(false)}
                   >
                     <span>
                       <img src={iconUser} />
                       Accounts
                     </span>
-                    {isOpenDropdown && (  
+                    {isOpenDropdown && (
                       <ul className="dropdownMenu">
                         <li>
                           <Button>
@@ -146,7 +161,9 @@ function Header() {
         </div>
       </header>
 
-      <Nav/>
+      <Nav />
+    </div>
+    <div className="afterHeader"></div>
     </>
   );
 }

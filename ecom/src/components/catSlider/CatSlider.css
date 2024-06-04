@@ -31,7 +31,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 7px;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
 }
 
 .cat_slider_Main .item .info h5 {
@@ -60,7 +60,13 @@
     left: inherit !important;
 }
 
-.cat_slider_Main .item:hover .info {
+/* .cat_slider_Main .item:hover .info {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: scale(1.1);
+} */
+
+.cat_slider_Main .item:hover .info,
+.cat_slider_Main .slick-current .info {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: scale(1.1);
 }

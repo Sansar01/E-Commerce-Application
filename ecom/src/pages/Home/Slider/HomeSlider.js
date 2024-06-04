@@ -5,6 +5,7 @@ import slider1 from '../../../assets/images/slider-1.png'
 import slider2 from '../../../assets/images/slider-2.png'
 import Button from '@mui/material/Button'
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
+import NewLetter from '../../../components/Newletter/NewLetter'
 
 function HomeSlider() {
   var settings = {
@@ -44,11 +45,7 @@ function HomeSlider() {
             </div>
           </div>
         </Slider>
-        <div className="newsletterBanner">
-          <SendOutlinedIcon />
-          <input type="text" placeholder="Your Email Address" />
-          <Button className="bg-g">Subscribe</Button>
-        </div>
+       <NewLetter/>
       </section>
     </section>
   )

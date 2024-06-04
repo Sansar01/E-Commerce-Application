@@ -1,0 +1,37 @@
+ .newsletterBanner {
+    width: 600px;
+    height: 50px;
+    position: absolute;
+    bottom: 100px;
+    left: 9%;
+    z-index: 10;
+}
+
+ .newsletterBanner input {
+    width: 75%;
+    height: 90%;
+    background: #fff;
+    border-radius: 30px;
+    border: 0px;
+    outline: none !important;
+    padding-left: 45px;
+}
+
+ .newsletterBanner button {
+    padding: 10px 30px !important;
+    border-radius: 30px !important;
+    color: #fff !important;
+    position: absolute;
+    top: 0px;
+    right: 150px;
+}
+
+ .newsletterBanner svg {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 10;
+    font-size: 22px !important;
+    transform: rotate(-21deg);
+    opacity: 0.5;
+}

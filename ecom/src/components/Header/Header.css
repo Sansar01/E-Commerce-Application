@@ -3,7 +3,22 @@ header {
     height: auto;
     margin: auto;
     padding: 30px 0px;
+    background: #fff;
 }
+.headerWrapper {
+    transition: all 0.3s ease-in-out ;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index:1000;
+}
+ .fixed{
+    top: -127px;
+}
+.afterHeader{margin-top: 200px;}
+
 
 header .headerSearch {
     width: 100%;

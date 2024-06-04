@@ -11,7 +11,10 @@ import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 function Product(props) {
     return (
         <div className="productThumb">
+      {
+        props.tag!=null &&  props.tag!=undefined &&
         <span className={`badge ${props.tag}`}>New</span>
+      }
             <Link>
                 <div className="imgWrapper">
                     <img src="https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-2.jpg" alt="" className='w-100' />
