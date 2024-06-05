@@ -1,8 +1,9 @@
 import React from 'react'
 import Button from '@mui/material/Button'
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
+import './NewsLetter.css'
 
-function NewLetter() {
+function NewsLetter() {
     return (
         <div className="newsletterBanner">
             <SendOutlinedIcon />
@@ -12,4 +13,4 @@ function NewLetter() {
     )
 }
 
-export default NewLetter
+export default NewsLetter

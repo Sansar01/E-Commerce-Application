@@ -36,5 +36,51 @@
 }
 
 .topProductsSection {
-    padding: 35px 10px;
+    padding: 30px 10px;
+}
+
+.newsLetterSection {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+}
+
+.newsLetterSection .box {
+    background: url('../../assets//images/bg.png');
+    width: 100%;
+    height: auto;
+    padding: 40px 110px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.newsLetterSection .box .info {
+    width: 55%;
+}
+
+.newsLetterSection .box .info h2 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 70px;
+    opacity: 0.8;
+}
+
+.newsLetterSection .box .info p {
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+.newsLetterSection .box .img {
+    width: 45%;
+}
+
+.newsLetterSection .box .img img {
+    position: relative;
+    top: 51px;
+}
+
+.newsLetterSection .box .newsletterBanner {
+    position: relative !important;
+    left: 0px !important;
+    bottom: inherit !important;
 }

@@ -7,6 +7,9 @@ import Product from '../../components/Product/Product'
 import Banner4 from '../../assets/images/banner4.jpg'
 import Slider from 'react-slick'
 import TopProducts from '../Home/TopProducts/TopProduct'
+import slider1 from '../../assets/images/slider-1.png'
+import newsletter from '../../assets/images/newsletter.png'
+import NewLetter from '../../components/Newsletter/NewsLetter'
 
 function Home() {
 
@@ -18,7 +21,7 @@ function Home() {
     slidesToScroll: 1,
     fade: false,
     arrows: true,
-    autoplay:3000
+    autoplay: 3000
   }
 
 
@@ -131,33 +134,42 @@ function Home() {
       </section>
 
       <section className='topProductsSection'>
-                <div className='container-fluid'>
-                    <div className='row'>
-                        <div className='col'>
-                            <TopProducts title="Top Selling" />
-                        </div>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col'>
+              <TopProducts title="Top Selling" />
+            </div>
 
-                        <div className='col'>
-                            <TopProducts title="Trending Products" />
-                        </div>
+            <div className='col'>
+              <TopProducts title="Trending Products" />
+            </div>
 
-                        <div className='col'>
-                            <TopProducts title="Recently added" />
-                        </div>
+            <div className='col'>
+              <TopProducts title="Recently added" />
+            </div>
 
-                        <div className='col'>
-                            <TopProducts title="Top Rated" />
-                        </div>
+            <div className='col'>
+              <TopProducts title="Top Rated" />
+            </div>
 
-                    </div>
-                </div>
-            </section>
+          </div>
+        </div>
+      </section>
 
-            <section className="newsLetterSection">
-              <div className="container-fluid">
-                <div className="box"></div>
-              </div>
-            </section>
+      {/* <section className="newsLetterSection">
+        <div className="container-fluid">
+          <div className="box d-flex align-items-center">
+            <div className="info">
+              <h2>Stay home & get your daily needs from our shop</h2>
+              <p>Start you'r daily shopping with Nest mart</p>
+              <NewLetter />
+            </div>
+            <div className="img">
+              <img src={newsletter} className='w-100' />
+            </div>
+          </div>
+        </div>
+      </section> */}
 
     </>
   )
