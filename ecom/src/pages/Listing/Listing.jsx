@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Listing/Listing.css'
 import { Link } from 'react-router-dom'
 import Sidebar from '../../components/Sidebar/Sidebar'
@@ -9,9 +9,15 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { ClickAwayListener } from '@mui/base/ClickAwayListener'
 
 function Listing() {
+
+  const [isOpenDropdown, setisOpenDropdown] = useState(false);
+  const[isOpenDropdown2,setisOpenDropdown2] = useState(false);
+
   return (
+
     <section className="listingPage">
       <div className="container-fluid">
         <div className="breadcrumb flex-column">
@@ -36,45 +42,89 @@ function Listing() {
             <div className="col-md-9 rightContent homeProduct pt-0">
               <div className="topStrip d-flex align-items-center">
                 <p className="mb-0">We found <span className='text-success'>29</span>items for you</p>
-                <div className="ms-auto d-flex align-items-center">
-                  <div className="tab_">
-                    <Button className=''>Show: 50</Button>
-                    <ul className="dropdownMenu">
+                <div className="ms-auto d-flex align-items-center position-relative">
+                  <ClickAwayListener onClickAway={() => setisOpenDropdown(false)}>
+                    <div className="tab_ position-relative">
+                      <Button className='btn_' onClick={() => setisOpenDropdown(!isOpenDropdown)}>Show: 50</Button>
+                      {
+                        isOpenDropdown && (
+                          <ul className="dropdownMenu">
+                            <li>
+                              <Button>
+                                <Person2OutlinedIcon />
+                                50
+                              </Button>
+                            </li>
+                            <li>
+                              <Button>
+                                <LocationOnOutlinedIcon />
+                              100
+                              </Button>
+                            </li>
+                            <li>
+                              <Button>
+                                <FavoriteBorderOutlinedIcon />
+                                150
+                              </Button>
+                            </li>
+                            <li>
+                              <Button>
+                                <SettingsOutlinedIcon />
+                               200
+                              </Button>
+                            </li>
+                            <li>
+                              <Button>
+                                <LogoutOutlinedIcon />
+                               250
+                              </Button>
+                            </li>
+                          </ul>
+                        )
+                      }
+                    </div>
+                  </ClickAwayListener>
+                  <ClickAwayListener onClickAway={() => setisOpenDropdown2(false)}>
+                  <div className="tab_ ms-3 position-relative">
+                    <Button className='btn_' onClick={()=>setisOpenDropdown2(!isOpenDropdown2)}>Sort By: Featured</Button>
+                    {
+                      isOpenDropdown2 && (
+                        <ul className="dropdownMenu">
                       <li>
                         <Button>
                           <Person2OutlinedIcon />
-                          My Account
+                         Featured
                         </Button>
                       </li>
                       <li>
                         <Button>
                           <LocationOnOutlinedIcon />
-                          Order Tracking
+                          Price:Low To High
                         </Button>
                       </li>
                       <li>
                         <Button>
                           <FavoriteBorderOutlinedIcon />
-                          My Whishlist
+                           Price:High To Low
                         </Button>
                       </li>
                       <li>
                         <Button>
                           <SettingsOutlinedIcon />
-                          Setting
+                          Price:High To Low
                         </Button>
                       </li>
                       <li>
                         <Button>
                           <LogoutOutlinedIcon />
-                          Sign-out
+                          Price:High To Low
                         </Button>
                       </li>
                     </ul>
+                      )
+                    }
                   </div>
-                  <div className="tab_ ms-3">
-                    <Button className=''>Sort By: Featured</Button>
-                  </div>
+                  </ClickAwayListener>
                 </div>
               </div>
               <div className="productRow ps-0 pe-2">

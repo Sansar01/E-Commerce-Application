@@ -186,7 +186,7 @@
 }
 
 .rightContent .topStrip .tab_ .dropdownMenu {
-    top: 68% !important;
-    right: 3% !important;
+    top: 100% !important;
+    right: 2% !important;
     border-radius: 5px;
 }
