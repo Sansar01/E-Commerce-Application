@@ -7,14 +7,16 @@ import Home from '../src/pages/Home/Home'
 import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
 import Listing from './pages/Listing/Listing';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
   <BrowserRouter>
      <Header/>
      <Routes>
-      <Route  path='/' element={<Home/>}/>
-      <Route  path='/listing' element={<Listing/>}/>
+      <Route exact={true} path='/' element={<Home/>}/>
+      <Route exact={true} path='/listing' element={<Listing/>}/>
+      <Route exact={true} path='*' element={<NotFound/>}/>
      </Routes>
      <Footer/>
   </BrowserRouter>
