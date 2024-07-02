@@ -1,44 +1,58 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-*{
-  margin: 0px; 
-  padding: 0px; 
-  box-sizing: border-box;
-}
-body{
-  font-family: "Roboto", sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.transition{
-  transition:all 0.3s ease-in-out ;
-}
-.cursor{
-  cursor: pointer;
-}
-.container-fluid{
-  padding: 0px 45px;
-}
-.bg-g, .bg-success{
-   background: #3bb77e !important;
-}
-.text-g{
-  color: #3bb77e;
-}
-.hd{
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 20px;
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
 }
 
- .price {
-  font-size: 18px;
-  margin-right: 10px;
+.text-org {
+    color: #FDC040 !important;
 }
 
- .oldprice {
-  font-size: 15px;
-  opacity: 0.6;
-  color: #000;
-  text-decoration: line-through;
+.text-light {
+    color: #8b8b8b !important;
+}
+
+.transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.container-fluid {
+    padding: 0px 45px;
+}
+
+.bg-g,
+.bg-success {
+    background: #3bb77e !important;
+}
+
+.text-g {
+    color: #3bb77e;
+}
+
+.hd {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.oldprice {
+    font-size: 15px;
+    opacity: 0.6;
+    color: #000;
+    text-decoration: line-through;
 }
