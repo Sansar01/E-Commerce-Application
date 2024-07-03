@@ -23,7 +23,9 @@ function Details() {
         <div className="row pt-3 pb-3">
           <div className="col-md-9 leftpart">
             <div className="row">
-              <div className="col-md-5 productZoom"></div>
+              <div className="col-md-5 productZoom">
+
+              </div>
               <div className="col-md-7 productInfo">
                 {/* productZoom code start here */}
                 <div className="col-md-3 productZoom"></div>
