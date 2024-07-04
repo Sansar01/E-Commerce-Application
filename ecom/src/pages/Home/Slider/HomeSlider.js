@@ -3,11 +3,10 @@ import Slider from 'react-slick'
 import '../Slider/Slider.css'
 import slider1 from '../../../assets/images/slider-1.png'
 import slider2 from '../../../assets/images/slider-2.png'
-import Button from '@mui/material/Button'
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 import NewLetter from '../../../components/Newsletter/NewsLetter'
 
 function HomeSlider() {
+  
   var settings = {
     dots: true,
     infinite: true,
